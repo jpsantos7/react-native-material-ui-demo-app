@@ -153,6 +153,7 @@ class Home extends Component {
                     {this.renderItem('Scanner', routes.scanner)}
                     {this.renderItem('Scan Results', routes.scanResults)}
                     {this.renderItem('Tasks', routes.tasks)}
+                    {this.renderItem('Login', routes.login)}
                     {this.renderItem('Action buttons', routes.actionButton)}
                     {this.renderItem('Avatars', routes.avatar)}
                     {this.renderItem('Badge', routes.badge)}

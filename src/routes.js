@@ -3,6 +3,7 @@ import Home from './App/Home.react';
 import Scanner from './Scanner';
 import ScanResults from './ScanResults';
 import Tasks from './Tasks';
+import Login from './Login';
 import ActionButton from './ActionButton';
 import ActionButtonToolbar from './ActionButton/ActionButtonToolbar.react';
 import ActionButtonSpeedDial from './ActionButton/ActionButtonSpeedDial.react';
@@ -35,6 +36,10 @@ export default {
     tasks: {
         title: 'Tasks',
         Page: Tasks,
+    },
+    login: {
+        title: 'Login',
+        Page: Login,
     },
     actionButton: {
         title: 'Action buttons',
