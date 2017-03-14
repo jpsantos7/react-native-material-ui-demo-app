@@ -4,11 +4,6 @@ import { Col, Row, Grid } from 'react-native-easy-grid';
 import Container from '../Container';
 import { COLOR, Toolbar } from '../react-native-material-ui';
 
-const propTypes = {
-    navigator: PropTypes.object.isRequired,
-    route: PropTypes.object.isRequired,
-};
-
 const styles = StyleSheet.create({
     scanResultsContainer: {
         paddingVertical: 16,
@@ -26,7 +21,15 @@ const styles = StyleSheet.create({
 });
 
 class ScanResults extends Component {
+    static propTypes = {
+        navigator: PropTypes.object.isRequired,
+        route: PropTypes.object.isRequired,
+    };
+    static contextTypes = {
+        uiTheme: PropTypes.object.isRequired,
+    };
     render() {
+        const { primaryColor } = this.context.uiTheme.palette;
         return (
             <Container>
                 <Toolbar
@@ -49,17 +52,23 @@ class ScanResults extends Component {
                             </Col>
                         </Row>
                         <Row>
-                            <Col size={1}>
-                                <Text style={styles.label}>Secção</Text>
+                            <Col>
+                                <Text style={styles.label}>Área</Text>
                                 <Text style={styles.valueText}>TDL</Text>
                             </Col>
-                            <Col size={1}>
-                                <Text style={styles.label}>Nível</Text>
+                            <Col>
+                                <Text style={styles.label}>Sector</Text>
                                 <Text style={styles.valueText}>2</Text>
                             </Col>
-                            <Col size={3}>
-                                <Text style={styles.label}>Nome do produto</Text>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <Text style={styles.label}>Canais</Text>
                                 <Text style={styles.valueText}>22, 23, 24, 25, 26, 27, 28, 29</Text>
+                            </Col>
+                            <Col>
+                                <Text style={styles.label}>Nível</Text>
+                                <Text style={styles.valueText}>2</Text>
                             </Col>
                         </Row>
                         <Row>
@@ -94,7 +103,4 @@ class ScanResults extends Component {
         );
     }
 }
-
-ScanResults.propTypes = propTypes;
-
 export default ScanResults;

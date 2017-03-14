@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, ToastAndroid, Platform } from 'react-native';
+import { ScrollView, StyleSheet, Text, ToastAndroid } from 'react-native';
 import React, { Component, PropTypes } from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Container from '../Container';
@@ -10,30 +10,25 @@ const propTypes = {
 };
 
 const styles = StyleSheet.create({
-    TasksContainer: {
-        paddingVertical: 16,
-        paddingHorizontal: 16,
-    },
     title: {
-        fontSize: 16,
+        fontSize: 18,
         color: COLOR.grey800,
         marginBottom: 4,
     },
     productId: {
-        color: COLOR.grey800,
-    },
-    info: {
-        color: COLOR.grey600,
+        fontSize: 15,
+        marginBottom: 4,
     },
     time: {
         textAlign: 'right',
-        color: COLOR.grey600,
-        marginBottom: 4,
     },
     flaws: {
         textAlign: 'right',
         color: COLOR.red500,
-        marginBottom: 8,
+    },
+    label: {
+        fontWeight: 'bold',
+        color: COLOR.grey800,
     },
 });
 
@@ -54,21 +49,33 @@ class Tasks extends Component {
                         centerElement={
                             <Grid>
                                 <Row>
-                                    <Col size={3}>
+                                    <Col size={4}>
                                         <Text style={styles.title} numberOfLines={2}>Ben-u-ron iuhasiudh ashdoash doash oahsdouahsd ouash douahmij asoijaoisjd oiaj</Text>
                                         <Text style={styles.productId}>1234567</Text>
-                                        {/* Area, Sector */}
-                                        <Text style={styles.info}>Área: TDL Sector: 123</Text>
-                                        {/* Channels list */}
-                                        <Text style={styles.info}>Canais: 20, 21 22, 120 </Text>
-                                        {/* Level - May or may not appear */}
-                                        <Text style={styles.info}>Nível: 2</Text>
+                                        <Row>
+                                            <Col>
+                                                <Text>
+                                                    <Text style={styles.label}>Área:</Text> TDL
+                                                </Text>
+                                            </Col>
+                                            <Col>
+                                                <Text>
+                                                    <Text style={styles.label}>Sector:</Text> 123
+                                                </Text>
+                                            </Col>
+                                        </Row>
+                                        <Text>
+                                            <Text style={styles.label}>Canais:</Text> 20, 21
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Nível:</Text> 2
+                                        </Text>
                                     </Col>
-                                    <Col size={1} style={{ justifyContent: 'space-around' }}>
+                                    <Col size={2} style={{ justifyContent: 'space-between' }}>
                                         <Text style={styles.time}>2h 30 mins</Text>
                                         <Text style={styles.flaws}>3 falhas</Text>
                                         <Button raised primary text="Feito"
-                                            onPress={() => ToastAndroid.show('List item pressed', ToastAndroid.SHORT)}
+                                            onPress={() => ToastAndroid.show('TÁ FEITO', ToastAndroid.SHORT)}
                                          />
                                     </Col>
                                 </Row>
@@ -81,21 +88,27 @@ class Tasks extends Component {
                         centerElement={
                             <Grid>
                                 <Row>
-                                    <Col size={3}>
+                                    <Col size={4}>
                                         <Text style={styles.title} numberOfLines={2}>Ben-u-ron</Text>
                                         <Text style={styles.productId}>1234567</Text>
-                                        {/* Area, Sector */}
-                                        <Text style={styles.info}>Área: TDL Sector: 123</Text>
-                                        {/* Channels list */}
-                                        <Text style={styles.info}>Canais: 20, 21 22, 120 </Text>
-                                        {/* Level - May or may not appear */}
-                                        <Text style={styles.info}>Nível: 2</Text>
+                                        <Text>
+                                            <Text style={styles.label}>Área:</Text> TDL
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Sector:</Text> 123
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Canais:</Text> 20, 21 22, 120
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Nível:</Text> 2
+                                        </Text>
                                     </Col>
-                                    <Col size={1} style={{ justifyContent: 'space-around' }}>
+                                    <Col size={2} style={{ justifyContent: 'space-between' }}>
                                         <Text style={styles.time}>2h 30 mins</Text>
                                         <Text style={styles.flaws}>3 falhas</Text>
                                         <Button raised primary text="Feito"
-                                            onPress={() => ToastAndroid.show('List item pressed', ToastAndroid.SHORT)}
+                                            onPress={() => ToastAndroid.show('TÁ FEITO', ToastAndroid.SHORT)}
                                          />
                                     </Col>
                                 </Row>
@@ -109,21 +122,27 @@ class Tasks extends Component {
                         centerElement={
                             <Grid>
                                 <Row>
-                                    <Col size={3}>
+                                    <Col size={4}>
                                         <Text style={styles.title} numberOfLines={2}>Ben-u-ron</Text>
                                         <Text style={styles.productId}>1234567</Text>
-                                        {/* Area, Sector */}
-                                        <Text style={styles.info}>Área: TDL Sector: 123</Text>
-                                        {/* Channels list */}
-                                        <Text style={styles.info}>Canais: 20, 21 22, 120 </Text>
-                                        {/* Level - May or may not appear */}
-                                        <Text style={styles.info}>Nível: 2</Text>
+                                        <Text>
+                                            <Text style={styles.label}>Área:</Text> TDL
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Sector:</Text> 123
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Canais:</Text> 20, 21 22, 120
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Nível:</Text> 2
+                                        </Text>
                                     </Col>
-                                    <Col size={1} style={{ justifyContent: 'space-around' }}>
+                                    <Col size={2} style={{ justifyContent: 'space-between' }}>
                                         <Text style={styles.time}>2h 30 mins</Text>
                                         <Text style={styles.flaws}></Text>
                                         <Button raised primary text="Feito"
-                                            onPress={() => ToastAndroid.show('List item pressed', ToastAndroid.SHORT)}
+                                            onPress={() => ToastAndroid.show('TÁ FEITO', ToastAndroid.SHORT)}
                                          />
                                     </Col>
                                 </Row>
@@ -136,21 +155,27 @@ class Tasks extends Component {
                         centerElement={
                             <Grid>
                                 <Row>
-                                    <Col size={3}>
+                                    <Col size={4}>
                                         <Text style={styles.title} numberOfLines={2}>Ben-u-ron</Text>
                                         <Text style={styles.productId}>1234567</Text>
-                                        {/* Area, Sector */}
-                                        <Text style={styles.info}>Área: TDL Sector: 123</Text>
-                                        {/* Channels list */}
-                                        <Text style={styles.info}>Canais: 20, 21 22, 120 </Text>
-                                        {/* Level - May or may not appear */}
-                                        <Text style={styles.info}>Nível: 2</Text>
+                                        <Text>
+                                            <Text style={styles.label}>Área:</Text> TDL
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Sector:</Text> 123
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Canais:</Text> 20, 21 22, 120
+                                        </Text>
+                                        <Text>
+                                            <Text style={styles.label}>Nível:</Text> 2
+                                        </Text>
                                     </Col>
-                                    <Col size={1} style={{ justifyContent: 'space-around' }}>
+                                    <Col size={2} style={{ justifyContent: 'space-between' }}>
                                         <Text style={styles.time}>2h 30 mins</Text>
                                         <Text style={styles.flaws}></Text>
                                         <Button raised primary text="Feito"
-                                            onPress={() => ToastAndroid.show('List item pressed', ToastAndroid.SHORT)}
+                                            onPress={() => ToastAndroid.show('TÁ FEITO', ToastAndroid.SHORT)}
                                          />
                                     </Col>
                                 </Row>

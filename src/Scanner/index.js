@@ -1,8 +1,9 @@
-import { View, StyleSheet, TextInput } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import React, { Component, PropTypes } from 'react';
 import Container from '../Container';
 
-import { Toolbar, Button } from '../react-native-material-ui';
+import { Toolbar, Button, COLOR } from '../react-native-material-ui';
+import { TextField } from 'react-native-material-textfield';
 
 const propTypes = {
     navigator: PropTypes.object.isRequired,
@@ -14,7 +15,6 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
         paddingHorizontal: 16,
         paddingBottom: 16,
     },
@@ -25,7 +25,11 @@ class Scanner extends Component {
         super(props);
         this.state = { text: '' };
     }
+    state = {
+        barcode: '',
+    };
     render() {
+        let { barcode } = this.state;
         return (
             <Container>
                 <Toolbar
@@ -35,13 +39,19 @@ class Scanner extends Component {
                 />
                 <View style={styles.scanContainer}>
                     <View>
-                        <TextInput
-                            style={{ width: 280, height: 40, marginBottom: 8 }}
-                            keyboardType="numeric"
-                            onChangeText={(text) => this.setState({text})}
-                            value={this.state.text}
+                        <TextField
+                            label=""
+                            ref="barcode"
+                            value={barcode}
+                            onBlur={() => this.setState({ barcode: this.refs.barcode.value() })}
+                            textColor="#fff"
+                            baseColor="#fff"
+                            tintColor="#fff"
+                            error="You made a mistake"
+                            errorColor={COLOR.red500}
+                            secureTextEntry
                         />
-                        <Button raised accent text="OK" style={{ paddingTop: 20 }} />
+                        <Button raised primary text="OK" style={{ paddingTop: 20 }} />
                     </View>
                 </View>
             </Container>
