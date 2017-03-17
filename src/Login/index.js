@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
     loginContainer: {
         paddingVertical: 16,
         paddingHorizontal: 16,
+        flex: 1,
+        alignSelf: 'stretch',
     },
     label: {
         color: COLOR.grey600,
@@ -25,6 +27,10 @@ const styles = StyleSheet.create({
     },
     errorText: {
         color: COLOR.red500,
+    },
+    canvas: {
+        maxWidth: 320,
+        alignSelf: 'center',
     },
 });
 
@@ -47,15 +53,16 @@ class Login extends Component {
 
         return (
             <View style={{
-                backgroundColor: primaryColor,
                 flex: 1,
+                flexDirection: 'column',
                 justifyContent: 'center',
+                alignItems: 'center',
             }}>
                 <ScrollView style={styles.loginContainer}>
                     <Image
-                        source={require('../assets/logo-w.png')}
+                        source={require('../assets/logo-color.png')}
                         resizeMode="contain"
-                        style={{ width: 320 }}
+                        style={styles.canvas}
                     />
                     <View style={styles.errorContainer}>
                         <Text style={styles.errorText}>Tem um erro no username</Text>
@@ -66,25 +73,25 @@ class Login extends Component {
                         ref="username"
                         value={username}
                         onBlur={() => this.setState({ username: this.refs.username.value() })}
-                        textColor="#fff"
-                        baseColor="#fff"
-                        tintColor="#fff"
+                        textColor={primaryColor}
+                        baseColor={primaryColor}
+                        tintColor={primaryColor}
                     />
                     <TextField
                         label="Password"
                         ref="password"
                         value={password}
                         onBlur={() => this.setState({ password: this.refs.password.value() })}
-                        textColor="#fff"
-                        baseColor="#fff"
-                        tintColor="#fff"
+                        textColor={primaryColor}
+                        baseColor={primaryColor}
+                        tintColor={primaryColor}
                         error="You made a mistake"
                         errorColor={COLOR.red500}
                         secureTextEntry
                     />
                     <Button
                         raised
-                        accent
+                        primary
                         text="Login"
                         onPress={() => this.props.navigator.pop()}
                     />

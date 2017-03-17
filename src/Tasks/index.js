@@ -11,22 +11,27 @@ const propTypes = {
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 18,
+        fontSize: 20,
         color: COLOR.grey800,
         marginBottom: 4,
     },
     productId: {
-        fontSize: 15,
+        fontSize: 18,
         marginBottom: 4,
     },
     time: {
+        fontSize: 18,
         textAlign: 'right',
     },
     flaws: {
+        fontSize: 18,
         textAlign: 'right',
         color: COLOR.red500,
     },
     label: {
+        fontSize: 16,
+    },
+    bold: {
         fontWeight: 'bold',
         color: COLOR.grey800,
     },
@@ -54,21 +59,21 @@ class Tasks extends Component {
                                         <Text style={styles.productId}>1234567</Text>
                                         <Row>
                                             <Col>
-                                                <Text>
-                                                    <Text style={styles.label}>Área:</Text> TDL
+                                                <Text style={styles.label}>
+                                                    <Text style={styles.bold}>Área:</Text> TDL
                                                 </Text>
                                             </Col>
                                             <Col>
-                                                <Text>
-                                                    <Text style={styles.label}>Sector:</Text> 123
+                                                <Text style={styles.label}>
+                                                    <Text style={styles.bold}>Sector:</Text> 123
                                                 </Text>
                                             </Col>
                                         </Row>
-                                        <Text>
-                                            <Text style={styles.label}>Canais:</Text> 20, 21
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Canais:</Text> 20, 21
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Nível:</Text> 2
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Nível:</Text> 2
                                         </Text>
                                     </Col>
                                     <Col size={2} style={{ justifyContent: 'space-between' }}>
@@ -91,17 +96,17 @@ class Tasks extends Component {
                                     <Col size={4}>
                                         <Text style={styles.title} numberOfLines={2}>Ben-u-ron</Text>
                                         <Text style={styles.productId}>1234567</Text>
-                                        <Text>
-                                            <Text style={styles.label}>Área:</Text> TDL
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Área:</Text> TDL
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Sector:</Text> 123
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Sector:</Text> 123
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Canais:</Text> 20, 21 22, 120
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Canais:</Text> 20, 21 22, 120
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Nível:</Text> 2
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Nível:</Text> 2
                                         </Text>
                                     </Col>
                                     <Col size={2} style={{ justifyContent: 'space-between' }}>
@@ -125,17 +130,17 @@ class Tasks extends Component {
                                     <Col size={4}>
                                         <Text style={styles.title} numberOfLines={2}>Ben-u-ron</Text>
                                         <Text style={styles.productId}>1234567</Text>
-                                        <Text>
-                                            <Text style={styles.label}>Área:</Text> TDL
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Área:</Text> TDL
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Sector:</Text> 123
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Sector:</Text> 123
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Canais:</Text> 20, 21 22, 120
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Canais:</Text> 20, 21 22, 120
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Nível:</Text> 2
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Nível:</Text> 2
                                         </Text>
                                     </Col>
                                     <Col size={2} style={{ justifyContent: 'space-between' }}>
@@ -158,17 +163,17 @@ class Tasks extends Component {
                                     <Col size={4}>
                                         <Text style={styles.title} numberOfLines={2}>Ben-u-ron</Text>
                                         <Text style={styles.productId}>1234567</Text>
-                                        <Text>
-                                            <Text style={styles.label}>Área:</Text> TDL
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Área:</Text> TDL
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Sector:</Text> 123
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Sector:</Text> 123
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Canais:</Text> 20, 21 22, 120
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Canais:</Text> 20, 21 22, 120
                                         </Text>
-                                        <Text>
-                                            <Text style={styles.label}>Nível:</Text> 2
+                                        <Text style={styles.label}>
+                                            <Text style={styles.bold}>Nível:</Text> 2
                                         </Text>
                                     </Col>
                                     <Col size={2} style={{ justifyContent: 'space-between' }}>

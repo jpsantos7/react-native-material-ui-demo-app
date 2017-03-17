@@ -14,6 +14,17 @@ const uiTheme = {
         /*primaryColor: COLOR.green500,*/
         /*accentColor: COLOR.pink500,*/
     },
+    typography: {
+        body2: {
+            fontSize: 18,
+        },
+        body1: {
+            fontSize: 18,
+        },
+        buttons: {
+            fontSize: 16,
+        },
+    },
 };
 
 class App extends Component {
