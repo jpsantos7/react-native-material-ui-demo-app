@@ -91,13 +91,6 @@ class ScanResults extends Component {
                         </Row>
                         <Row>
                             <Col>
-                                <Text style={styles.label}>Última Entrada</Text>
-                                <Text style={styles.valueText}>
-                                    2016/12/15 <Text style={styles.small}>DEV</Text>{"\n"}
-                                    <Text style={styles.small}>Recolha Infarmed</Text>
-                                </Text>
-                            </Col>
-                            <Col>
                                 <Text style={styles.label}>Última Saída</Text>
                                 <Text style={styles.valueText}>2016/12/15</Text>
                             </Col>

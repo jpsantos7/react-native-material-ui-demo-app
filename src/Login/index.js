@@ -57,7 +57,8 @@ class Login extends Component {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-            }}>
+            }}
+            >
                 <ScrollView style={styles.loginContainer}>
                     <Image
                         source={require('../assets/logo-color.png')}

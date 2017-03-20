@@ -79,7 +79,10 @@ class Tasks extends Component {
                                     <Col size={2} style={{ justifyContent: 'space-between' }}>
                                         <Text style={styles.time}>2h 30 mins</Text>
                                         <Text style={styles.flaws}>3 falhas</Text>
-                                        <Button raised primary text="Feito"
+                                        <Button
+                                            raised
+                                            primary
+                                            text="Feito"
                                             onPress={() => ToastAndroid.show('TÁ FEITO', ToastAndroid.SHORT)}
                                          />
                                     </Col>
@@ -112,7 +115,10 @@ class Tasks extends Component {
                                     <Col size={2} style={{ justifyContent: 'space-between' }}>
                                         <Text style={styles.time}>2h 30 mins</Text>
                                         <Text style={styles.flaws}>3 falhas</Text>
-                                        <Button raised primary text="Feito"
+                                        <Button
+                                            raised
+                                            primary
+                                            text="Feito"
                                             onPress={() => ToastAndroid.show('TÁ FEITO', ToastAndroid.SHORT)}
                                          />
                                     </Col>
@@ -146,7 +152,10 @@ class Tasks extends Component {
                                     <Col size={2} style={{ justifyContent: 'space-between' }}>
                                         <Text style={styles.time}>2h 30 mins</Text>
                                         <Text style={styles.flaws}></Text>
-                                        <Button raised primary text="Feito"
+                                        <Button
+                                            raised
+                                            primary
+                                            text="Feito"
                                             onPress={() => ToastAndroid.show('TÁ FEITO', ToastAndroid.SHORT)}
                                          />
                                     </Col>
@@ -179,7 +188,10 @@ class Tasks extends Component {
                                     <Col size={2} style={{ justifyContent: 'space-between' }}>
                                         <Text style={styles.time}>2h 30 mins</Text>
                                         <Text style={styles.flaws}></Text>
-                                        <Button raised primary text="Feito"
+                                        <Button
+                                            raised
+                                            primary
+                                            text="Feito"
                                             onPress={() => ToastAndroid.show('TÁ FEITO', ToastAndroid.SHORT)}
                                          />
                                     </Col>

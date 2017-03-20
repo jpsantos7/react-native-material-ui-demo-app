@@ -49,8 +49,6 @@ class Loading extends Component {
                     <Spinner
                         color={accentColor}
                         visible={this.state.visible}
-                        textContent={"Carregando..."}
-                        textStyle={{ color: '#fff' }}
                     />
                 </View>
             </Container>
